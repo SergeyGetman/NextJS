@@ -1,0 +1,18 @@
+.navbar {
+    background-color: #1976d2;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 1vh;
+}
+
+.error {
+    text-align: center;
+    font-size: 10vh;
+    margin-top: 15%;
+}
