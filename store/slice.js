@@ -4,17 +4,21 @@ export const getDataSliceInfo = createSlice({
   name: "globalInfo",
   initialState: {
     name: "",
-    data: [],
-    showIsLogin: false,
+    DT: [],
+    dataAvtorized: [],
+    avtorizedStop: true,
   },
 
   reducers: {
     addDataUser(state, action) {
-      console.log("this is state", { ...state });
       console.log("this is action", action);
+      state.dataAvtorized = action.payload;
+    },
+    changeStopAvtorized(state, action) {
+      state.avtorizedStop = action.payload;
     },
   },
 });
 
 export default getDataSliceInfo.reducer;
-export const { addDataUser } = getDataSliceInfo.actions;
+export const { addDataUser, changeStopAvtorized } = getDataSliceInfo.actions;

@@ -21,6 +21,9 @@ const MainContainer = ({ children, keywords }) => {
         <ALink href={"/users"} text={LocalizationData.textUsers}>
           {LocalizationData.title}
         </ALink>
+        <ALink href={"/calendar"} text={LocalizationData.textUsers}>
+          {LocalizationData.title}
+        </ALink>
         <ALink href={"/pictures"} text={LocalizationData.textPictures}>
           {LocalizationData.title}
         </ALink>

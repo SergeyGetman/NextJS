@@ -26,7 +26,6 @@ function Copyright(props) {
         Your Website
       </Link>{" "}
       {new Date().getFullYear()}
-      {"."}
     </Typography>
   );
 }
@@ -36,7 +35,7 @@ const theme = createTheme();
 export const Authorized = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const data = new FormData(event.currentTarget || {});
     console.log({
       email: data.get("email"),
       password: data.get("password"),
