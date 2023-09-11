@@ -13,6 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addDataUser, changeStopAvtorized } from "../store/slice";
 import { redirect } from "next/navigation";
 import { useRouter } from "next/router";
+import Box from "@mui/material/Box";
 
 export const Login = () => {
   const paperStyle = {
@@ -61,59 +62,61 @@ export const Login = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit} sx={{ marginLeft: "33%" }}>
-        <FormControl>
-          <Grid>
-            <Paper elevation={10} style={paperStyle}>
-              <Grid align="center">
-                <Avatar style={avatarStyle}>
-                  <AccountCircleIcon />
-                </Avatar>
-                <h2>Sign In</h2>
-              </Grid>
-              <TextField
-                sx={{ margin: "5px" }}
-                label="Username"
-                placeholder="Enter username"
-                variant="outlined"
-                fullWidth
-                required
-                value={formData.email}
-                onChange={handleChangeEmail}
-              />
-              <TextField
-                sx={{ margin: "5px" }}
-                placeholder="Enter password"
-                type="password"
-                variant="outlined"
-                fullWidth
-                required
-                value={formData.password}
-                onChange={handleChangePass}
-              />
-              <FormControlLabel
-                control={<Checkbox name="checkedB" color="primary" />}
-                label="Remember me"
-              />
-              <Button
-                type="submit"
-                color="primary"
-                variant="contained"
-                style={btnstyle}
-                fullWidth
-              >
-                Sign in
-              </Button>
-              <Typography>
-                <Link href="#">Forgot password ?</Link>
-              </Typography>
-              <Typography>
-                Do you have an account ?<Link href="/login">Sign Up</Link>
-              </Typography>
-            </Paper>
-          </Grid>
-        </FormControl>
-      </form>
+      <Box className="form-control">
+        <form onSubmit={handleSubmit}>
+          <FormControl>
+            <Grid>
+              <Paper elevation={10} style={paperStyle}>
+                <Grid align="center">
+                  <Avatar style={avatarStyle}>
+                    <AccountCircleIcon />
+                  </Avatar>
+                  <h2>Sign In</h2>
+                </Grid>
+                <TextField
+                  sx={{ margin: "5px" }}
+                  label="Username"
+                  placeholder="Enter username"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  value={formData.email}
+                  onChange={handleChangeEmail}
+                />
+                <TextField
+                  sx={{ margin: "5px" }}
+                  placeholder="Enter password"
+                  type="password"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  value={formData.password}
+                  onChange={handleChangePass}
+                />
+                <FormControlLabel
+                  control={<Checkbox name="checkedB" color="primary" />}
+                  label="Remember me"
+                />
+                <Button
+                  type="submit"
+                  color="primary"
+                  variant="contained"
+                  style={btnstyle}
+                  fullWidth
+                >
+                  Sign in
+                </Button>
+                <Typography>
+                  <Link href="#">Forgot password ?</Link>
+                </Typography>
+                <Typography>
+                  Do you have an account ?<Link href="/login">Sign Up</Link>
+                </Typography>
+              </Paper>
+            </Grid>
+          </FormControl>
+        </form>
+      </Box>
     </>
   );
 };

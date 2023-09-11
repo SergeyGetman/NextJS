@@ -7,3 +7,13 @@
 body {
     background-color: #f4efef;
 }
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.form-control{
+    display: flex;
+    justify-content: center;
+}
