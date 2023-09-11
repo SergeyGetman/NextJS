@@ -49,7 +49,7 @@ export const Login = () => {
 
   const checkFormData = useCallback(() => {
     if (!!dataAvtorized?.email && !!dataAvtorized.password) {
-      router.push("/calendar").then((r) => r);
+      router.push("/test-calendar").then((r) => r);
     }
   }, [dataAvtorized]);
 
